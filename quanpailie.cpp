@@ -23,7 +23,7 @@ void dfs(int u, int a[], bool st[])
         if(!st[i]){  // 如果数字i尚未被使用
             a[u] = i;      // 填入数字i到位置u
             st[i] = true;  // 标记i已被使用
-            dfs(u + 1);    // 递归填充下一个位置
+            dfs(u + 1,a,st);    // 递归填充下一个位置
             st[i] = false; // 回溯：撤销选择，允许后续排列使用i
         }
     }
